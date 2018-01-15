@@ -1,0 +1,23 @@
+{
+  "name": "time",
+  "version": "1.0.0",
+  "description": "计算时间",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BadWaka/time.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BadWaka/time/issues"
+  },
+  "homepage": "https://github.com/BadWaka/time#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

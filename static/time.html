@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>time</title>
+</head>
+
+<body>
+    <div>起始时间：
+        <input type="date" onchange="handleStartTimeChange(this.value)">
+    </div>
+    <div>截止时间：
+        <input type="date" onchange="handleEndTimeChange(this.value)">
+    </div>
+    <div>
+        <button onclick="handleBtnClick()">计算</button>
+    </div>
+</body>
+<script>
+    window.onload = function () {};
+
+    var startTime, endTime = '';
+
+    function handleStartTimeChange(value) {
+        console.log('handleStartTimeChange', value);
+        startTime = value;
+    }
+
+    function handleEndTimeChange(value) {
+        console.log('handleEndTimeChange', value);
+        endTime = value;
+    }
+
+    function handleBtnClick() {
+        console.log('handleBtnClick');
+        var startTimeDate = new Date(startTime);
+        var endTimeDate = new Date(endTime);
+
+        var hours = endTimeDate.getTime() - startTimeDate.getTime();
+        hours = hours / 3600 / 1000;
+        alert(hours + '小时');
+    }
+</script>
+
+</html>

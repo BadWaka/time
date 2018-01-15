@@ -5,11 +5,14 @@
 </head>
 
 <body>
+    <div>姓名：
+        <input type="text" onchange="handleNameChange(this.value)">
+    </div>
     <div>起始时间：
-        <input type="date" onchange="handleStartTimeChange(this.value)">
+        <input type="datetime-local" onchange="handleStartTimeChange(this.value)">
     </div>
     <div>截止时间：
-        <input type="date" onchange="handleEndTimeChange(this.value)">
+        <input type="datetime-local" onchange="handleEndTimeChange(this.value)">
     </div>
     <div>
         <button onclick="handleBtnClick()">计算</button>
@@ -18,7 +21,12 @@
 <script>
     window.onload = function () {};
 
-    var startTime, endTime = '';
+    var name, startTime, endTime = '';
+
+    function handleNameChange(value) {
+        console.log('handleNameChange', value);
+        name = value;
+    }
 
     function handleStartTimeChange(value) {
         console.log('handleStartTimeChange', value);
@@ -37,7 +45,7 @@
 
         var hours = endTimeDate.getTime() - startTimeDate.getTime();
         hours = hours / 3600 / 1000;
-        alert(hours + '小时');
+        alert(name + ',' + hours + '小时');
     }
 </script>
 
